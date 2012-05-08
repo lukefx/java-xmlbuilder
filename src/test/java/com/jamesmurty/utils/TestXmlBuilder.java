@@ -44,6 +44,7 @@ public class TestXmlBuilder extends TestCase {
 		    .e("java-xmlbuilder")
 		        .a("language", "Java")
 		        .a("scm","SVN")
+		        .a("version", "1.0", 1 == 0) // explicit false
 		        .e("Location")
 		            .a("type", "URL")
 		            .t("http://code.google.com/p/java-xmlbuilder/")

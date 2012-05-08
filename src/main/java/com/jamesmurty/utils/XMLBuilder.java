@@ -546,6 +546,13 @@ public class XMLBuilder {
         return this;
     }
 
+    public XMLBuilder attribute(String name, String value, Boolean only) {
+        if (only) {
+        	xmlElement.setAttribute(name, value);
+        }
+        return this;
+    }
+    
     /**
      * Synonym for {@link #attribute(String, String)}.
      *
@@ -562,6 +569,10 @@ public class XMLBuilder {
         return attribute(name, value);
     }
 
+    public XMLBuilder attr(String name, String value, Boolean only) {
+        return attribute(name, value, only);
+    }    
+    
     /**
      * Synonym for {@link #attribute(String, String)}.
      *
@@ -578,6 +589,10 @@ public class XMLBuilder {
         return attribute(name, value);
     }
 
+    public XMLBuilder a(String name, String value, Boolean only) {
+        return attribute(name, value, only);
+    }    
+    
     /**
      * Add a text value to the element represented by this builder node, and
      * return the node representing the element to which the text
